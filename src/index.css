@@ -1,51 +1,76 @@
-/* src/styles/global.css */
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --accent: #007acc;
+  --accent-muted: #005fa3;
+  --bg-dark: #2d2d2d;
+  --code-bg: #fdf9f9;
+  --code-fg: #222222;
+  --border-radius: 8px;
+  --font-main: 'Segoe UI', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+[data-theme='dark'] {
+  --bg: #0f1117;
+  --fg: #f4f4f4;
+  --card-bg: #1a1d2b;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --accent: #66c2ff;
+  --accent-muted: #3b9edb;
+  --bg-dark: #1c1c1c;
+  --code-bg: #1c1c1c;
+  --code-fg: #f8f8f2;
+}
 
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f7f9fc;
-    color: #222;
-    line-height: 1.6;
-  }
-  
-  h1, h2, h3 {
-    color: #0f0f0f;
-  }
-  
-  a {
-    color: #007acc;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  code {
-    color: black;
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
-    font-size: 0.95em;
-  }
-  
-  pre {
-    background-color: #fdf9f9;
-    color: #f8f8f2;
-    padding: 1em;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  input[type="range"] {
-    accent-color: #007acc;
-  }
-  
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  margin: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 8px var(--card-shadow);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-muted);
+  text-decoration: underline;
+}
+
+pre, code {
+  background-color: var(--code-bg);
+  color: var(--code-fg);
+  font-family: var(--font-mono);
+  border-radius: var(--border-radius);
+}
+
+button {
+  font-family: var(--font-main);
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--accent-muted);
+}

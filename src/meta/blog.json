@@ -1,0 +1,9 @@
+[
+    {
+      "slug": "shannon-entropy",
+      "title": "Shannon Entropy and the Art of Surprise",
+      "description": "A deep dive into information theory, entropy, and machine learning intuition with Python and plots.",
+      "date": "2025-04-12",
+      "tags": ["information theory", "machine learning", "math"]
+    }
+  ]

@@ -1,15 +1,21 @@
+import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import CodeBlock from './components/CodeBlock';
 import Latex from './components/Latex';
 
-
 const components = {
   code: (props: any) => {
-    const language = props.className?.replace('language-', '') || 'text';
-    return <CodeBlock language={language}>{props.children}</CodeBlock>;
+    return <CodeBlock>{props.children}</CodeBlock>;
   },
   inlineCode: (props: any) => (
-    <code style={{ background: '#eee', padding: '2px 4px', borderRadius: '4px' }}>
+    <code style={{
+      background: 'var(--code-bg)',
+      color: 'var(--code-fg)',
+      padding: '0.2rem 0.4rem',
+      borderRadius: '4px',
+      fontFamily: 'var(--font-mono)',
+      fontSize: '0.95rem'
+    }}>
       {props.children}
     </code>
   ),
@@ -17,7 +23,11 @@ const components = {
 };
 
 const MDXProviderWrapper = ({ children }: { children: React.ReactNode }) => (
-  <MDXProvider components={components}>{children}</MDXProvider>
+  <MDXProvider components={components}>
+    <main >
+      {children}
+    </main>
+  </MDXProvider>
 );
 
 export default MDXProviderWrapper;

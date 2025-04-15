@@ -16,7 +16,8 @@ const BlogPostPage = () => {
   console.log('Post component:', PostComponent);
 
   return (
-    <PostLayout title={post.title} date={post.date} tags={post.tags}>
+    <PostLayout title={post.title} date={post.date} tags={post.tags} >
+      
     <MDXProviderWrapper>
       <PostComponent />
     </MDXProviderWrapper>

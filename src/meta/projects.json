@@ -1,0 +1,14 @@
+[
+    {
+      "name": "Emotion Recognition",
+      "description": "Speech-based emotion recognition using CNNs and audio preprocessing pipelines in Python and TensorFlow.",
+      "tech": ["Python", "TensorFlow", "Poetry"],
+      "link": "/projects/emotion-recognition"
+    },
+    {
+      "name": "Volatility Forecasting",
+      "description": "Combining HAR models and LSTMs to predict S&P 500 volatility from high-frequency financial data.",
+      "tech": ["Python", "LSTM", "Finance"],
+      "link": "/projects/volatility"
+    }
+  ]
