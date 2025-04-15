@@ -1,5 +1,3 @@
-// CoinEntropyPlot.tsx
-import React, { useState } from 'react';
 import Plot from 'react-plotly.js';
 
 const CoinEntropyPlot = () => {
