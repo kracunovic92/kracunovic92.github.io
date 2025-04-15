@@ -12,5 +12,5 @@ export default defineConfig({
       rehypePlugins: [rehypeKatex],
     }),
   ],
-  base: '/my-github-page/'
+  base: '/'
 })
